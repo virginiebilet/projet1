@@ -1,0 +1,125 @@
+﻿<!doctype html>
+	<head>
+		<title>Inscrivez vous à Saint Gabriel !</title>
+		<meta charset="utf-8" />
+		<style>
+			 /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+		</style>
+	</head>
+	<body>
+		<h1>Inscrivez vous vite en BTS !</h1>
+		
+		<form method="get" id="forminscription" action="">
+			<label id="etiquette">Nom :</label> <input type="text" name="nom" required/> * <br />
+			
+			<label id="etiquette">Prénom :</label> <input type="text" name="prenom" /> <br />
+			
+			<label id="etiquette">Adresse :</label> <input type="text" name="adresse" placeholder="Entrez le numéro et la rue"/> <br />
+			<!-- pas d'espace dans le pattern entre crochets et accolades  -->
+			<label id="etiquette">Code Postal :</label> <input type="text" name="cp" pattern="[0-9]{5}"
+       		title="5 chiffres"	/> <br />
+			
+			<label id="etiquette">Ville :</label> <input type="text" name="ville" id="ville" list="nomdesvilles" /> <br />
+		    <datalist id="nomdesvilles" >
+				<option value="Paris"></option>
+				<option value="Perpignan"></option>
+				<option value="Perrigueux"></option>
+				<option value="Boulogne-Billancourt"></option>
+				<option value="Boulogne-sur-mer"></option>
+				<option value="Marseille"></option>
+				<option value="Marignane"></option>
+				<option value="Martigues"></option>
+				<option value="Mimizan"></option>
+				<option value="Monpellier"></option>
+				<option value="Briare"></option>
+				<option value="Brives"></option>
+				<option value="Bobigny"></option>
+			</datalist>
+			<label id="etiquette">Votre satisfaction quant à l'établissement :</label> 
+			         <input type="range" name="satisfaction" min="1" max="10"/> <br />
+			<label id="etiquette">Rendez vous :</label> 
+			<input type="date" name="daterdv" min="2016-09-09" max="2016-12-09"  value="2016-09-15" autocomplete/> <br />
+			<label id="etiquette">truc :</label> <input type="search" name="truc" 	/> <br />
+			<label id="etiquette">Votre téléphone :</label> 
+			         <input type="tel" name="telephone" /> <br />
+					 
+					 <label id="etiquette">Votre email :</label> 
+			         <input type="email" name="mail" /> <br />
+					 
+					 <label id="etiquette">Entrez votre age:</label> 
+			         <input type="number" name="age" min="1" max="125" step="2"/> <br />
+					 
+					  <!-- Rectangular switch -->
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider"></div>
+</label>
+
+<!-- Rounded switch -->
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider round"></div>
+</label>
+		<input type="submit" name="ok" value="S'inscrire">
+		
+		</form>
+	
+	</body>
+</html>
